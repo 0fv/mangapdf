@@ -1,0 +1,16 @@
+# github.com/PuerkitoBio/goquery v1.5.1
+## explicit
+github.com/PuerkitoBio/goquery
+# github.com/andybalholm/cascadia v1.1.0
+github.com/andybalholm/cascadia
+# github.com/phpdave11/gofpdi v1.0.8
+github.com/phpdave11/gofpdi
+# github.com/pkg/errors v0.8.1
+github.com/pkg/errors
+# github.com/signintech/gopdf v0.9.12
+## explicit
+github.com/signintech/gopdf
+github.com/signintech/gopdf/fontmaker/core
+# golang.org/x/net v0.0.0-20200202094626-16171245cfb2
+golang.org/x/net/html
+golang.org/x/net/html/atom
