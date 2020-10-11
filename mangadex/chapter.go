@@ -93,6 +93,9 @@ func (p *picBuf) getPicBuf(m *Mangadex) {
 		log.Println("io error", err)
 		return
 	}
+	// if p.Index == 1{
+	// 	ioutil.WriteFile("1.png",buf,0644)
+	// }
 	p.Buf = buf
 }
 

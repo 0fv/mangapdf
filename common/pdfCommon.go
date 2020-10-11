@@ -3,6 +3,7 @@ package common
 import (
 	"bytes"
 	"image"
+	"image/png"
 	"log"
 
 	"github.com/signintech/gopdf"
@@ -35,8 +36,14 @@ func AddPictureBytesToPdf(b []byte, pdf *gopdf.GoPdf) error {
 		p = &gopdf.Rect{W: w, H: h}
 		ws = (595 - w) / 2
 	}
+	bt := []byte{}
+	buf := bytes.NewBuffer(bt)
+	err = png.Encode(buf, img)
+	if err != nil {
+		return err
+	}
 	// var PageSizeA4 = &Rect{W: 595, H: 842, unitOverride: UnitPT}
-	pic, err := gopdf.ImageHolderByBytes(b)
+	pic, err := gopdf.ImageHolderByReader(buf)
 	if err != nil {
 		return err
 	}

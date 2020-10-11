@@ -38,7 +38,7 @@ func TestDetail(t *testing.T) {
 func TestChapter(t *testing.T) {
 	m := Mangadex{}
 	log.Println(m.checkFile())
-	c, _ := m.GetContent("24363")
+	c, _ := m.GetContent("24408")
 	endChan := make(chan int, 1)
 	m.ToPDF(c, endChan)
 	select {
